@@ -20,15 +20,14 @@ class Player {
     }
 }
 
-const player1 = new Player("Lebron", "James", 23, 39)
-const player2 = new Player("Davis", "Anthony", 6, 29)
-const player3 = new Player("Westbrook", "Russ", 0, 35)
-let playersArray = [player1, player2, player3]
-
 const getAverageAge = (players: Player[]) => {
     const averageAge =  ((players.map(player => player.age).reduce((totalAge, age) => totalAge + age)) / players.length).toFixed(0)
     console.log(averageAge)
 }
 //test
+const player1 = new Player("Lebron", "James", 23, 39)
+const player2 = new Player("Davis", "Anthony", 6, 29)
+const player3 = new Player("Westbrook", "Russ", 0, 35)
+let playersArray = [player1, player2, player3]
 getAverageAge(playersArray)
 
